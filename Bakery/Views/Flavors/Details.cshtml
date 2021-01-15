@@ -3,14 +3,14 @@
 }
 
 @model Bakery.Models.Flavor;
-
-<h3>Flavor Details</h3>
-<hr />
+<div class="container card">
+<u><h3>Flavor Details</h3></u>
+<br />
 <h4>@Html.DisplayName("Flavor Type"): @Html.DisplayFor(model => model.FlavorName)</h4>
 
 @if(@Model.Treats.Count == 0)
 {
-  <p>This flavor does not contain any treats :(</p>
+  <span><p>This flavor does not contain any treats :(</p></span>
 }
 else
 {
@@ -27,3 +27,4 @@ else
 <p>@Html.ActionLink("Back to Flavors list", "Index")</p>
 <p>@Html.ActionLink("Edit Flavor", "Edit", new { id = Model.FlavorId })</p>
 <p>@Html.ActionLink("Delete Flavor", "Delete", new { id = Model.FlavorId })</p>
+</div>

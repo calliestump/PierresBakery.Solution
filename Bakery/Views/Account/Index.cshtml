@@ -2,17 +2,17 @@
   Layout = "_Layout";
 }
 
-@using System.Security.Claims
 <div class="container card">
 <hr />
 @if (User.Identity.IsAuthenticated)
 {
 
-    <p>Hello @User.Identity.Name!</p>
+    <p>Welcome to Pierre's <strong>@User.Identity.Name!</strong></p>
     @using (Html.BeginForm("LogOff", "Account"))
     {
         <input type="submit" class="btn btn-default" value="Log out" />
     }
+    <br />
 }
 else
 {

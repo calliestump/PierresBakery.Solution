@@ -16,5 +16,8 @@
 
 body {
   text-align: center;
-  display: auto;
+  background-color: rgb(207, 211, 212);
+}
+hr {
+ color: black;
 }
