@@ -1,0 +1,22 @@
+@{
+ Layout = "_Layout";
+}
+ 
+@model Bakery.Models.Flavor
+<div class="container card">
+  <h4>Assign flavor to @Html.Label("'") <strong>@Html.DisplayFor(model => model.FlavorName) @Html.Label("'")</strong></h4>
+  <hr />
+  @using (Html.BeginForm())
+  {
+  @Html.HiddenFor(model => model.FlavorId)
+  
+  <h4>@Html.Label("Select Treat")</h4>
+
+  <p>@Html.DropDownList("TreatId")</p>
+  <br />
+  <input type="submit" value="Save" class="btn btn-default" />
+  }
+  <br />
+  <p>@Html.ActionLink("Show all flavors", "Index")</p>
+</div>
+
