@@ -46,7 +46,7 @@ namespace Bakery.Controllers
 
       public ActionResult Login()
       {
-        return View();
+          return View();
       }
 
       [HttpPost]
@@ -55,11 +55,11 @@ namespace Bakery.Controllers
         Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, isPersistent: true, lockoutOnFailure: false);
         if (result.Succeeded)
         {
-          return RedirectToAction("Index");
+            return RedirectToAction("Index");
         }
         else
         {
-          return View();
+            return View();
         }
       }
 
