@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Security.Claims;
 namespace Bakery.Controllers
 {
-  [Authorize]
+  
   public class FlavorsController : Controller
   {
     private readonly BakeryContext _db;
-    public FlavorsController(BakeryContext db)
+    private readonly UserManager<ApplicationUser> _userManager;
+    public FlavorsController(UserManager<ApplicationUser> userManager, BakeryContext db)
     {
+      _userManager = userManager;
       _db = db;
     }
 
@@ -23,6 +25,7 @@ namespace Bakery.Controllers
       List<Flavor> model = _db.Flavors.ToList();
       return View(model);
     }
+    [Authorize]
     public ActionResult Create()
     {
       return View();
