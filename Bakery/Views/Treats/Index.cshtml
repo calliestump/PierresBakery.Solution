@@ -5,8 +5,8 @@
 @using Bakery.Models;
 @model List<Bakery.Models.Treat>;
 <div class="container card">
-<h3>Treats</h3>
-
+<h2>Pierre's Treats</h2>
+<hr />
 @if (Model.Count == 0)
 {
   <h4><span>No treats have been added to Pierres :(</span></h4>
@@ -14,7 +14,7 @@
 
 @foreach (Treat treat in Model)
 {
-  <li>@Html.ActionLink($"{treat.TreatName}", "Details", new { id = treat.TreatId })</li>
+  <h4>@Html.ActionLink($"{treat.TreatName}", "Details", new { id = treat.TreatId })</h4>
 }
 <br />
 <p>@Html.ActionLink("Add new treat", "Create")</p>

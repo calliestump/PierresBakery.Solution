@@ -4,7 +4,8 @@
  
 @model Bakery.Models.Flavor
 <div class="container card">
-  <u><h3>Assign flavor to @Html.Label("'") <strong>@Html.DisplayFor(model => model.FlavorName) @Html.Label("'")</strong></h3></u>
+  <h3>Assign flavor to @Html.Label("'") <strong>@Html.DisplayFor(model => model.FlavorName) @Html.Label("'")</strong></h3>
+  <hr />
  
   @using (Html.BeginForm())
   {

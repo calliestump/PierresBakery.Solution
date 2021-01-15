@@ -3,7 +3,7 @@
 }
 
 @model Bakery.Models.Treat;
-
+<div class="container card">
 <h3>Treat Details</h3>
 <hr />
 <h4>@Html.DisplayName("Treat"): @Html.DisplayFor(model => model.TreatName)</h4>
@@ -18,7 +18,7 @@ else
   <ul>
     @foreach(var join in Model.Flavors)
     {
-      <li>@join.Flavor.FlavorName</li>
+      <h4><strong>@join.Flavor.FlavorName</strong></h4>
     }
   </ul>
 }
@@ -27,3 +27,4 @@ else
 <p>@Html.ActionLink("Back to Treats list", "Index")</p>
 <p>@Html.ActionLink("Edit Treat", "Edit", new { id = Model.TreatId })</p>
 <p>@Html.ActionLink("Delete Treat", "Delete", new { id = Model.TreatId })</p>
+</div>

@@ -3,9 +3,9 @@
 }
 
 @model Bakery.Models.Treat
-
+<div class="container card">
 <h3>Edit Details: @Html.Label("'")<strong>@Html.DisplayFor(model => model.TreatName)</strong>@Html.Label("'")</h3>
-
+<hr />
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.TreatId)
@@ -18,3 +18,4 @@
 }
 <br />
 <p>@Html.ActionLink("Back to Treats list", "Index")</p>
+</div>

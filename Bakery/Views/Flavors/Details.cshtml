@@ -4,9 +4,10 @@
 
 @model Bakery.Models.Flavor;
 <div class="container card">
-<u><h3>Flavor Details</h3></u>
-<br />
-<h4>@Html.DisplayName("Flavor Type"): @Html.DisplayFor(model => model.FlavorName)</h4>
+<h3>Flavor Details</h3>
+<hr />
+
+<h4>@Html.DisplayName("Flavor Type"): <strong>@Html.DisplayFor(model => model.FlavorName)</h4></strong>
 
 @if(@Model.Treats.Count == 0)
 {
@@ -14,11 +15,11 @@
 }
 else
 {
-  <h4>Treats with this flavor type:</h4>
+  <h4>Pierre's Treats with this flavor:</h4>
   <ul>
     @foreach(var join in Model.Treats)
     {
-      <li>@join.Treat.TreatName</li>
+      <h4><strong>@join.Treat.TreatName</strong></h4>
     }
   </ul>
 }

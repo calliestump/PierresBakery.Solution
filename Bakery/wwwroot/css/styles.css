@@ -2,7 +2,7 @@
   margin-top: 5%;
   margin-bottom: 5%;
   padding: 1%;
-  background-color: rgba(255, 255, 255, 0.671);
+  background-color: rgba(243, 226, 194, 0.856);
   border-radius: 10px;
   color: rgb(0, 0, 0);
   width: 4in;
@@ -16,8 +16,18 @@
 
 body {
   text-align: center;
-  background-color: rgb(207, 211, 212);
+  background-color: rgba(185, 151, 86, 0.493);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
 }
-hr {
- color: black;
+span {
+  color: rgb(192, 53, 53);
+}
+h1 {
+  color: rgb(196, 148, 101);
+}
+.nav-link {
+  color: white;
+}
+.btn {
+  background-color: rgb(201, 184, 172);
 }

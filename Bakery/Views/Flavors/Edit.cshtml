@@ -3,8 +3,9 @@
 }
 
 @model Bakery.Models.Flavor 
-
+<div class="container card">
 <h3>Edit Details: @Html.Label("'")<strong>@Html.DisplayFor(model => model.FlavorName)</strong>@Html.Label("'")</h3>
+<hr />
 
 @using (Html.BeginForm())
 {
@@ -18,3 +19,4 @@
 }
 <br />
 <p>@Html.ActionLink("Back to Flavors list", "Index")</p>
+</div>

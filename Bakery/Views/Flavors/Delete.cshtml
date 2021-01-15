@@ -3,8 +3,9 @@
 }
 
 @model Bakery.Models.Flavor 
-
-<h2>Are you sure you want to delete this Flavor?</h2>
+<div class="container card">
+<hr />
+<h3>Are you sure you want to delete this Flavor?</h3>
 
 <h3><strong>@Html.Label("'") @Html.DisplayFor(model => model.FlavorName) @Html.Label("'")</strong></h3>
 @using (Html.BeginForm())
@@ -13,3 +14,5 @@
 }
 <br />
 <p>@Html.ActionLink("Back to Flavors list", "Index")</p>
+<hr />
+</div>
