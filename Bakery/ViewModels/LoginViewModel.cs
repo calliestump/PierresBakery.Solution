@@ -1,4 +1,4 @@
-namespace Bakery.Models
+namespace Bakery.ViewModels
 {
   public class LoginViewModel
   {
