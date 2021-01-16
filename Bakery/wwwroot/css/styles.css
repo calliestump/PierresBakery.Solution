@@ -5,7 +5,8 @@
   background-color: rgba(243, 226, 194, 0.856);
   border-radius: 10px;
   color: rgb(0, 0, 0);
-  width: 4in;
+  width: 5in;
+  height: auto;
 }
 .nav {
   background-color: rgba(255, 255, 255, 0.644);
