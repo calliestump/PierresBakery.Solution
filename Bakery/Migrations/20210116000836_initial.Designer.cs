@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Bakery.Migrations
 {
     [DbContext(typeof(BakeryContext))]
-    [Migration("20210115164719_Initial")]
-    partial class Initial
+    [Migration("20210116000836_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -236,12 +236,12 @@ namespace Bakery.Migrations
             modelBuilder.Entity("Bakery.Models.FlavorTreat", b =>
                 {
                     b.HasOne("Bakery.Models.Flavor", "Flavor")
-                        .WithMany("Treats")
+                        .WithMany("JoinTables")
                         .HasForeignKey("FlavorId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Bakery.Models.Treat", "Treat")
-                        .WithMany("Flavors")
+                        .WithMany("JoinTables")
                         .HasForeignKey("TreatId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });

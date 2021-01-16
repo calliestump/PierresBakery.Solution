@@ -9,7 +9,7 @@
 
 <h4>@Html.DisplayName("Flavor Type"): <strong>@Html.DisplayFor(model => model.FlavorName)</h4></strong>
 
-@if(@Model.Treats.Count == 0)
+@if(@Model.JoinTables.Count == 0)
 {
   <span><p>This flavor does not contain any treats :(</p></span>
 }
@@ -17,7 +17,7 @@ else
 {
   <h4>Pierre's Treats with this flavor:</h4>
   <ul>
-    @foreach(var join in Model.Treats)
+    @foreach(var join in Model.JoinTables)
     {
       <h4><strong>@join.Treat.TreatName</strong></h4>
     }

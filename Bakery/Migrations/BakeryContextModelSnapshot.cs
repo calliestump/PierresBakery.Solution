@@ -234,12 +234,12 @@ namespace Bakery.Migrations
             modelBuilder.Entity("Bakery.Models.FlavorTreat", b =>
                 {
                     b.HasOne("Bakery.Models.Flavor", "Flavor")
-                        .WithMany("Treats")
+                        .WithMany("JoinTables")
                         .HasForeignKey("FlavorId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Bakery.Models.Treat", "Treat")
-                        .WithMany("Flavors")
+                        .WithMany("JoinTables")
                         .HasForeignKey("TreatId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });

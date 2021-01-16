@@ -28,7 +28,7 @@ namespace Bakery.Controllers
     public ActionResult Details(int id)
     {
       var thisTreat = _db.Treats
-          .Include(treat => treat.Flavors)
+          .Include(treat => treat.JoinTables)
           .ThenInclude(join => join.Flavor)
           .FirstOrDefault(treat => treat.TreatId == id);
       return View(thisTreat);
@@ -39,6 +39,7 @@ namespace Bakery.Controllers
     {
       return View();
     }
+    
     [HttpPost]
     public ActionResult Create(Treat treat)
     {

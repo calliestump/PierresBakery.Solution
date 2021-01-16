@@ -8,7 +8,7 @@
 <hr />
 <h4>@Html.DisplayName("Treat"): @Html.DisplayFor(model => model.TreatName)</h4>
 
-@if(@Model.Flavors.Count == 0)
+@if(@Model.JoinTables.Count == 0)
 {
   <p>This treat does not contain any assigned flavors:(</p>
 }
@@ -16,7 +16,7 @@ else
 {
   <h4>Flavors assigned to this treat:</h4>
   <ul>
-    @foreach(var join in Model.Flavors)
+    @foreach(var join in Model.JoinTables)
     {
       <h4><strong>@join.Flavor.FlavorName</strong></h4>
     }

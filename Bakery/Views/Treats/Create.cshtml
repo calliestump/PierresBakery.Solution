@@ -3,6 +3,7 @@
 }
 
 @model Bakery.Models.Treat
+
 <div class="container card">
 <h4>Add Treat to Pierre's</h4>
 <hr />
@@ -12,7 +13,7 @@
   <br />
   @Html.TextBoxFor(model => model.TreatName)
   <br /><br />
-  <input class="btn btn-default" type="button" type="submit" value="Add new treat!" />
+  <input class="btn btn-default" type="submit" value="Add new treat!" />
 }
 <br />
 <p>@Html.ActionLink("Show all treats", "Index")</p>

@@ -6,12 +6,12 @@ namespace Bakery.Models
   {
     public Flavor()
     {
-      this.Treats = new HashSet<FlavorTreat>();
+      this.JoinTables = new HashSet<FlavorTreat>();
     }
     public int FlavorId { get; set; }
     public string FlavorName { get; set; }
     public virtual ApplicationUser User { get; set; }
 
-    public virtual ICollection<FlavorTreat> Treats { get; set; }
+    public virtual ICollection<FlavorTreat> JoinTables { get; set; }
   }
 }
