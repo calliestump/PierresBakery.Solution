@@ -6,11 +6,12 @@
 <div class="container card">
 <h3>Treat Details</h3>
 <hr />
+
 <h4>@Html.DisplayName("Treat"): @Html.DisplayFor(model => model.TreatName)</h4>
 
 @if(@Model.JoinTables.Count == 0)
 {
-  <p>This treat does not contain any assigned flavors:(</p>
+  <span><p>This treat is not assigned to any flavors :(</p></span>
 }
 else
 {
