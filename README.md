@@ -44,15 +44,11 @@ $ cd Desktop
 $ cd [known directory]
 $ code .
 ```
-5. Navigate to the testing project folder in your VS terminal initalizes dotnet.
-```
-dotnet restore
-```
-6. If you wish to see if everything is compiling correctly go to the Office directory and run the following:
+5. If you wish to see if everything is compiling correctly go to the Bakery directory and run the following:
 ```
 dotnet build
 ```
-7. To see if the program is functioning properly you can use:
+6. To see if the program is functioning properly you can use:
 ```
 dotnet watch run
 ```
@@ -65,7 +61,7 @@ git remote add origin [personal Github repo. link]
 #### **Note**: Do this is your main parent directory. You do not want to have git initialized in any other places.
 
 #### **Import Database with Entity Framework Core**
-1. Navigate to the "PierresBakery.Solution" directory using your terminal.
+1. Navigate to the "PierresBakery.Solution/Bakery" directory using your terminal.
 2. Run the command 'dotnet ef database update to generate the database through Entity Framework Core.
 3. (Optional) To update the database with any changes to the code, run the command 'dotnet ef migrations add [MigrationsName] which will use Entity Framework Core's code-first principle to generate a database update. After, run the previous command 'dotnet ef database update' to update the database.
 
@@ -88,6 +84,7 @@ git remote add origin [personal Github repo. link]
 * MySQL WorkBench V: 8.0
 * Entity Framework Core V: 2.2.6
 * dotnet script, REPL
+* Identity 
 
 ------------------------------
 ## 👤 Contributor
