@@ -30,6 +30,12 @@ There are no known bugs at this time.
 * Code Editor 
 Ex.) [Visual Studio Code](https://code.visualstudio.com/)
 * MySQL Community Server & Workbench
+
+#### **Import Database with Entity Framework Core**
+1. Navigate to the "PierresBakery.Solution/Bakery" directory using your terminal.
+2. Run the command 'dotnet ef database update to generate the database through Entity Framework Core.
+3. (Optional) To update the database with any changes to the code, run the command 'dotnet ef migrations add [MigrationsName] which will use Entity Framework Core's code-first principle to generate a database update. After, run the previous command 'dotnet ef database update' to update the database.
+
 ### 🔧 **Setup/Installation**
 #### **Project Editor Setup**
 1. Copy this download link: https://github.com/calliestump/PierresBakery.Solution.git
@@ -59,11 +65,6 @@ This will show you if everything is compiling correctly; otherwise you be will p
 git remote add origin [personal Github repo. link]
 ```
 #### **Note**: Do this is your main parent directory. You do not want to have git initialized in any other places.
-
-#### **Import Database with Entity Framework Core**
-1. Navigate to the "PierresBakery.Solution/Bakery" directory using your terminal.
-2. Run the command 'dotnet ef database update to generate the database through Entity Framework Core.
-3. (Optional) To update the database with any changes to the code, run the command 'dotnet ef migrations add [MigrationsName] which will use Entity Framework Core's code-first principle to generate a database update. After, run the previous command 'dotnet ef database update' to update the database.
 
 #### **AppSettings/Database Connection Setup**
 1. Create a new file in the "PierresBakery.Solution" directory named appsettings.json
