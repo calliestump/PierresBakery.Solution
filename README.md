@@ -67,7 +67,7 @@ git remote add origin [personal Github repo. link]
 #### **Note**: Do this is your main parent directory. You do not want to have git initialized in any other places.
 
 #### **AppSettings/Database Connection Setup**
-1. Create a new file in the "PierresBakery.Solution" directory named appsettings.json
+1. Create a new file in the "PierresBakery.Solution/Bakery" directory named appsettings.json
 2. Add in the following code snippet to the new appsettings.json file:
 ```
 {
